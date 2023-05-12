@@ -1,0 +1,15 @@
+image: ghcr.io/sushrut1101/docker:arch
+
+variables:
+  FOX_SYNC: "https://gitlab.com/OrangeFox/sync.git"
+  CONFIG: "config.sh"
+
+OrangeFox-CI:
+  stage: build
+  timeout: 3 hours
+  script:
+    - source config.sh
+    - curl -sL https://raw.githubusercontent.com/Recoveries-CI/OrangeFox-CI/main/scripts/checks.sh | bash
+    - curl -sL https://raw.githubusercontent.com/Recoveries-CI/OrangeFox-CI/main/scripts/sync.sh | bash
+    - curl -sL https://raw.githubusercontent.com/Recoveries-CI/OrangeFox-CI/main/scripts/build.sh | bash
+    - curl -sL https://raw.githubusercontent.com/Recoveries-CI/OrangeFox-CI/main/scripts/upload.sh | bash
