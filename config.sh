@@ -2,9 +2,9 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/zacky46/recovery_xiaomi_whyred.git -b fox_12.1"
+export DT_LINK="https://github.com/zacky46/recovery_xiaomi_lavender.git -b fox_12.1"
 
-export DEVICE="whyred"
+export DEVICE="lavender"
 export OEM="xiaomi"
 export DT_PATH="device/$OEM/$DEVICE"
 
